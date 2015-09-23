@@ -2,6 +2,8 @@
 
 @import "variables/layout";
 @import "variables/color";
+@import "_mixins";
+@import "_layout";
 @import "_ad.less";
 @import "_entry.less";
 
@@ -50,25 +52,5 @@ a[href] {
 a.keyword {
   &:link, &:visited, &:focus, &:hover {
     color: @keyword-anchor-text-fg;
-  }
-}
-
-#container {
-  max-width: 85%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: .85rem;
-  padding-left: .85rem;
-}
-
-#main {
-  max-width: 40rem;
-  margin-right: auto;
-  margin-left: auto;
-
-  @media (min-width: @full-breakpoint) {
-    & {
-      // margin-left: 25rem;
-    }
   }
 }

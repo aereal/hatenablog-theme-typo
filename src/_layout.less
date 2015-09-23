@@ -1,0 +1,48 @@
+@import "variables/layout";
+
+#blog-title,
+#main {
+  max-width: @body-text-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#blog-title {
+  @media (min-width: @full-breakpoint) {
+    & {
+      position: relative;
+    }
+  }
+}
+
+#blog-title-content {
+  @media (min-width: @full-breakpoint) {
+    & {
+      .left-floated();
+      max-height: @full-header-height;
+      margin-top: -@full-header-height;
+    }
+  }
+}
+
+#title {
+  @media (min-width: @full-breakpoint) {
+    & {
+      margin-top: 0;
+      line-height: 1;
+    }
+  }
+}
+
+#blog-description {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#content {
+  @media (min-width: @full-breakpoint) {
+    & {
+      margin-top: @full-header-height;
+    }
+  }
+}
