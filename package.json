@@ -1,0 +1,12 @@
+{
+  "name": "hatenablog-theme-typo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "author": "aereal",
+  "license": "MIT"
+}

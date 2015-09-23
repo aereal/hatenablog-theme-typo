@@ -1,0 +1,74 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css");
+
+@import "_layout.less";
+@import "_color.less";
+@import "_ad.less";
+@import "_entry.less";
+
+body {
+  font-family: 'Avenir Next', 'YuGothic', sans-serif;
+  line-height: 1.612;
+  background-color: @bg;
+  color: @fg;
+}
+
+@media (min-width: @full-breakpoint) {
+  body {
+    font-size: 112.5%;
+  }
+}
+
+hr {
+  border-color: transparent;
+  border-width: 2rem;
+}
+
+p {
+  margin: @paragraph-margin 0 0;
+}
+
+ul, ol, dl {
+  margin: @section-margin 0;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+a[href] {
+  text-decoration: none;
+
+  &:link {
+    color: @anchor-text-fg;
+  }
+  &:visited {
+    color: @visited-anchor-text-fg;
+  }
+}
+
+a.keyword {
+  &:link, &:visited, &:focus, &:hover {
+    color: @keyword-anchor-text-fg;
+  }
+}
+
+#container {
+  max-width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: .85rem;
+  padding-left: .85rem;
+}
+
+#main {
+  max-width: 40rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @full-breakpoint) {
+    & {
+      // margin-left: 25rem;
+    }
+  }
+}

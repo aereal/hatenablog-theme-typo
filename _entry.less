@@ -1,0 +1,55 @@
+@import "_layout.less";
+
+
+.entry {
+  margin: @entry-margin 0;
+
+  @media (min-width: @full-breakpoint) {
+    & {
+      position: relative;
+    }
+  }
+}
+
+.entry-header {
+  position: relative;
+  margin-bottom: @section-margin;
+
+  @media (min-width: @full-breakpoint) {
+    & {
+      position: absolute;
+      width: 25rem;
+      top: 0;
+      left: -25rem;
+    }
+  }
+}
+
+.entry-title-empty {
+  display: none;
+}
+
+.entry-header-menu {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+}
+
+.entry-footer {
+  position: relative;
+  margin-top: @section-margin;
+  font-size: 87.5%;
+  text-align: right;
+
+  & .hatena-star-container {
+    display: inline-block;
+  }
+}
+
+.entry-footer-section {
+  display: inline-block;
+
+  & .author {
+    display: none;
+  }
+}
