@@ -11,6 +11,15 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./'));
 });
 
+gulp.task('develop:less', function () {
+  var proxyDomain = process.env.PROXY_DOMAIN;
+  if (!proxyDomain) {
+    throw new Error('PROXY_DOMAIN is required');
+  }
+  return compileLess()
+    .pipe(gulp.dest('./' + proxyDomain + '/'));
+});
+
 gulp.task('watch', function () {
   gulp.watch('./src/**/*.less', ['less']);
 });
