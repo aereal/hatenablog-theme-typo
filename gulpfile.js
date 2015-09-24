@@ -21,7 +21,7 @@ gulp.task('develop:less', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./src/**/*.less', ['less']);
+  gulp.watch('./src/**/*.less', ['develop:less']);
 });
 
 function compileLess() {
