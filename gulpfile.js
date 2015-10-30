@@ -7,9 +7,8 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('default', ['develop:less']);
 
 gulp.task('develop:less', function () {
-  assertProxyDomain();
   return compileLess()
-    .pipe(gulp.dest('./' + proxyDomain + '/'));
+    .pipe(gulp.dest('./' + assertProxyDomain() + '/'));
 });
 
 gulp.task('watch', function () {
@@ -30,4 +29,5 @@ function assertProxyDomain() {
   if (!proxyDomain) {
     throw new Error('PROXY_DOMAIN is required');
   }
+  return proxyDomain;
 }
