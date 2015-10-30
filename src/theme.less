@@ -25,10 +25,10 @@
 // mixin
 .left-floated {
   position: absolute;
-  width: @aside-width;
   margin: 0;
   top: 0;
   left: -(@aside-width + @aside-width-margin);
+  text-align: right;
 }
 
 body {
@@ -173,7 +173,7 @@ a.keyword {
   @media (min-width: @full-breakpoint) {
     & {
       .left-floated();
-      text-align: right;
+      width: @aside-width;
     }
   }
 
