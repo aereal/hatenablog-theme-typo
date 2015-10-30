@@ -9,7 +9,7 @@ $body-text-width: 40rem;
 $aside-width: $body-text-width / 2;
 $aside-width-margin: 2.5rem;
 $full-header-height: 10rem;
-$full-breakpoint: 66rem;
+$full-breakpoint: $body-text-width + ($aside-width + $aside-width-margin) * 2;
 $full-container-width: 85%;
 
 $nakabeni: #DB4D6D;
