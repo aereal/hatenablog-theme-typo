@@ -1,6 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css");
 
 // layout
+@golden-ratio: 1.61803;
 @paragraph-margin: 1.125rem;
 @entry-margin: 3rem;
 @section-margin: 2.5rem;
@@ -19,6 +20,7 @@
 @anchor-text-fg: @nakabeni;
 @visited-anchor-text-fg: lighten(desaturate(@anchor-text-fg, 30%), 20%);
 @keyword-anchor-text-fg: desaturate(@anchor-text-fg, 75%);
+@heading-anchor-fg: lighten(desaturate(@anchor-text-fg, 55%), 15%);
 
 // mixin
 .left-floated {
@@ -148,6 +150,17 @@ a.keyword {
   border-style: solid none;
 }
 
+// component
+#title {
+  font-size: 1rem * (@golden-ratio * @golden-ratio);
+
+  a {
+    &:link, &:visited {
+      color: lighten(@fg, 50%);
+    }
+  }
+}
+
 // entry
 .entry-header {
   position: relative;
@@ -162,6 +175,10 @@ a.keyword {
       .left-floated();
       text-align: right;
     }
+  }
+
+  .entry-title-link:link {
+    color: @heading-anchor-fg;
   }
 }
 
