@@ -1,27 +1,27 @@
 var path = require('path');
 var gulp = require('gulp');
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('default', ['develop:less']);
+gulp.task('default', ['sass']);
 
-gulp.task('develop:less', function () {
-  return compileLess()
+gulp.task('sass', function () {
+  return compileSass()
     .pipe(gulp.dest('./' + assertProxyDomain() + '/'));
 });
 
 gulp.task('watch', function () {
   assertProxyDomain();
-  gulp.watch('./src/**/*.less', ['develop:less']);
+  gulp.watch('./src/**/*.scss', ['sass']);
 });
 
-function compileLess() {
-  return gulp.src('./src/theme.less')
-    .pipe(less())
+function compileSass() {
+  return gulp.src('./src/theme.scss')
     .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(minifyCSS())
-    .pipe(sourcemaps.write());
+    .pipe(sourcemaps.write())
 }
 
 function assertProxyDomain() {
