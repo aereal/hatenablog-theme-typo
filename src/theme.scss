@@ -159,6 +159,12 @@ a.keyword {
   margin-bottom: $section-margin;
 }
 
+@media (min-width: $full-breakpoint) {
+  .entry-date {
+    font-size: $golden-ratio * 1rem;
+  }
+}
+
 .entry-title {
   line-height: 1;
 
