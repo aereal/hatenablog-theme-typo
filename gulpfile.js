@@ -6,11 +6,6 @@ var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('default', ['develop:less']);
 
-gulp.task('less', function () {
-  return compileLess()
-    .pipe(gulp.dest('./'));
-});
-
 gulp.task('develop:less', function () {
   assertProxyDomain();
   return compileLess()
