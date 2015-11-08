@@ -8,7 +8,7 @@ gulp.task('default', ['sass']);
 
 gulp.task('sass', function () {
   return compileSass()
-    .pipe(gulp.dest('./' + assertProxyDomain() + '/'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function () {
