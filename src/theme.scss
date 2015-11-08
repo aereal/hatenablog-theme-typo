@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css");
 
 // layout
@@ -32,7 +33,7 @@ $heading-anchor-fg: lighten(desaturate($anchor-text-fg, 55%), 15%);
 }
 
 body {
-  font-family: 'Avenir Next', 'YuGothic', sans-serif;
+  font-family: 'Avenir Next', 'Noto Sans Japanese', 'YuGothic', sans-serif;
   line-height: 1.612;
   background-color: $bg;
   color: $fg;
