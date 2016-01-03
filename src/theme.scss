@@ -11,6 +11,9 @@ $aside-width: $body-text-width / 3;
 $aside-width-margin: 2.5rem;
 $full-header-height: 5rem;
 $full-breakpoint: $body-text-width + ($aside-width + $aside-width-margin) * 2;
+$narrow-body-width: 20rem;
+$narrow-gutter: 1.5rem;
+$narrow-breakpoint: $narrow-body-width + ($narrow-gutter * 2);
 $full-container-width: 85%;
 
 $nakabeni: #DB4D6D;
@@ -95,6 +98,13 @@ a.keyword {
   max-width: $body-text-width;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (max-width: $narrow-breakpoint) {
+  #blog-title,
+  #main {
+    max-width: $narrow-body-width;
+  }
 }
 
 @media (min-width: $full-breakpoint) {
