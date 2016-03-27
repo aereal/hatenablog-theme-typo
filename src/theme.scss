@@ -3,6 +3,10 @@
 @import "_vars";
 
 // element
+body, :root {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+}
+
 body {
   line-height: $baseline;
   color: #0F2540;
