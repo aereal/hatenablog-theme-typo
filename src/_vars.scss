@@ -1,0 +1,6 @@
+$golden-ratio: 1.61803;
+$baseline: $golden-ratio;
+$body-text-width: 40rem;
+$supplement-width: $body-text-width / $golden-ratio;
+$medium-breakpoint: $body-text-width;
+$large-breakpoint: $body-text-width + $supplement-width;
