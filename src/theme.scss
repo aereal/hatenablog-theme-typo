@@ -146,8 +146,8 @@ a[href] {
 }
 
 .entry-footer {
-  & > * {
-    margin: 0;
+  #content & > * {
+    margin-top: 0;
     display: inline-block;
   }
 
