@@ -3,4 +3,4 @@
 dist_dir='dist'
 domain="${DOMAIN:-_}"
 
-exec node-sass -o "${dist_dir}/${domain}/" $@
+exec node-sass --source-map true --source-map-embed -o "${dist_dir}/${domain}/" $@
