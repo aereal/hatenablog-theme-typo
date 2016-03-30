@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cocproxy -p 8087",
     "build": "scripts/compile-scss src/theme.scss",
-    "watch": "gulp watch"
+    "watch": "scripts/compile-scss -w -r src/theme.scss"
   },
   "author": "aereal",
   "license": "MIT",
