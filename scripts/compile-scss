@@ -1,0 +1,6 @@
+#!/bin/sh
+
+dist_dir='dist'
+domain="${DOMAIN:-_}"
+
+exec node-sass -o "${dist_dir}/${domain}/" $@

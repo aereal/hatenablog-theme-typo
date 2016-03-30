@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "start": "cocproxy -p 8087",
-    "build": "gulp",
+    "build": "scripts/compile-scss src/theme.scss",
     "watch": "gulp watch"
   },
   "author": "aereal",
